@@ -17,6 +17,7 @@ class _ContactsState extends State<Contacts> {
 
   TextEditingController phone = TextEditingController();
 
+  /// this list to store data
   List<Widget> contact = [];
 
   @override
@@ -56,6 +57,7 @@ class _ContactsState extends State<Contacts> {
               ),
               Row(
                 children: [
+                  ///this function (visibility) to make ignore
                   Visibility(
                     visible: contact.length == 3 ? false : true,
                     child: CustomButton(
@@ -82,9 +84,13 @@ class _ContactsState extends State<Contacts> {
     );
   }
 
+  ///this function i create to add widget in list
   void add() {
+    ///i make it in (set state) to make change when i add
     setState(() {
       contact.add(ContactItem(phone: phone.text, name: name.text));
+
+      ///this function (clear) to clean text field before i add
       name.clear();
       phone.clear();
     });
@@ -92,12 +98,12 @@ class _ContactsState extends State<Contacts> {
 
   void delete() {
     setState(() {
+      ///this function (removeLast) to delete list
       contact.removeLast();
     });
   }
 
   ///this function to lock (TextEditingController)
-
   @override
   void dispose() {
     super.dispose();

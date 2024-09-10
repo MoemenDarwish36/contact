@@ -10,9 +10,11 @@ class ContactItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      ///this variable (double.infinity) to make container
+      /// take all available size
       width: double.infinity,
-      padding: EdgeInsets.all(20),
-      margin: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(20),
+      margin: const EdgeInsets.all(15),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(24)),
       child: Column(

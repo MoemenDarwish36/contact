@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-///if i need to create attribute
+///if i need to create attribute like this
 /// typedef onClick = Void Function() ;
 class CustomButton extends StatelessWidget {
   VoidCallback press;
@@ -20,12 +20,13 @@ class CustomButton extends StatelessWidget {
     return Expanded(
       child: ElevatedButton(
 
-          ///this to style ElevatedButton
+          ///this function (styleFrom) to style ElevatedButton
           style: ElevatedButton.styleFrom(backgroundColor: backGround),
           onPressed: press,
           child: Text(
             title,
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            style: const TextStyle(
+                color: Colors.black, fontWeight: FontWeight.bold),
           )),
     );
   }

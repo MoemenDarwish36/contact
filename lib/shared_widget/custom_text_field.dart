@@ -19,12 +19,19 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      ///this parameter (keyboardType) to choice a kind of keyboard
+      ///which i need to display
       keyboardType: type,
       controller: controller,
+
+      ///this parameter (style) to edit input text
       style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
       decoration: InputDecoration(
         fillColor: Colors.white,
         filled: true,
+
+        ///this 3 parameter (border,focusedBorder,enabledBorder) to
+        ///design text field
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(24),
         ),
